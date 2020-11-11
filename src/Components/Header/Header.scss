@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: black;
+    border-bottom: 5px solid white;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        height: 250px;
+        width: 250px;
+        background: url('../../img/logo-w-strajkowe-03_small.svg') no-repeat;
+        background-size: contain;
+    }
+
+}
