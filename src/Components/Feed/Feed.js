@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Article from '../Article/Article';
+import LazyLoad from 'react-lazyload';
 
 import "./Feed.scss";
 
@@ -22,11 +23,15 @@ const Feed = () => {
     return (
         
         <section className="articles-container">
-            {posts.map(post => 
-                <div key={post.date}>  
-                    <Article {...post}/>
-                </div>   
+            
+            {posts.map(post =>
+                <LazyLoad key={post.date} height={250}> 
+                    <div key={post.date}>  
+                        <Article {...post}/>
+                    </div> 
+                </LazyLoad>  
             )}   
+            
         </section>
     )
 }
